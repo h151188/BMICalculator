@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMI Kalkulator</string>
+    <string name="height_input">Høyde:</string>
+    <string name="weight_input">Vekt:</string>
+    <string name="button_calculate">Kalkuler</string>
+    <string name="yourBMI">Din BMI er:</string>
+    <string name="button_reset">Reset</string>
+</resources>

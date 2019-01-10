@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="height_input">Height:</string>
+    <string name="weight_input">Weight:</string>
+    <string name="button_calculate">Calculate</string>
+    <string name="yourBMI">Your BMI is:</string>
+    <string name="button_reset">Reset</string>
+</resources>
