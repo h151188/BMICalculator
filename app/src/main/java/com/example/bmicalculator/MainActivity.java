@@ -2,6 +2,7 @@ package com.example.bmicalculator;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,15 @@ public class MainActivity extends AppCompatActivity {
         TextView resultOutput = findViewById(R.id.resultField);
         resultOutput.setText(resultString);
 
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("lastHeight", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putString("lastHeight", height.getText().toString());
+        editor.commit();
+
+        weight.setText("");
+        String lh = pref.getString("lastHeight", null);
+        height.setText(lh);
+
         closeKeyboard();
     }
 
@@ -39,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
         height.setText("");
         weight.setText("");
         resultOutput.setText("");
+
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("lastHeight", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.clear();
+        editor.commit();
+
         height.requestFocus();
     }
 
